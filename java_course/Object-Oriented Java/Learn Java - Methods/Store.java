@@ -293,7 +293,12 @@ public class Store {
     public void advertise() {
         // System.out.println("Come spend some money!");
         System.out.println("Selling " + productType + " ! ");
-        System.out.println(message);
+        // System.out.println(message);
+    }
+
+    // greetCustomer method
+    public void greetCustomer(String customer) {
+        System.out.println("Welcome to the store, " + customer + "!");
     }
 
     // main method
@@ -309,6 +314,9 @@ public class Store {
         // Store cookieShop = new Store(cookie);
 
         // cookieShop.advertise();
+
+        // Call the greetCustomer() method on the lemonadeStand object
+        lemonadeStand.greetCustomer("Mr. Anderson");
     }
 }
 
