@@ -206,16 +206,16 @@ public class Store {
 
     // main method
     public static void main(String[] args) {
-        // Store lemonadeStand = new Store("Lemonade");
+        Store lemonadeStand = new Store("Lemonade");
         // // Call the advertise() method on the lemonadeStand object
         // lemonadeStand.advertise();
         // lemonadeStand.advertise();
         // lemonadeStand.advertise();
         // lemonadeStand.advertise();
 
-        String cookie = "Cookies";
-        Store cookieShop = new Store(cookie);
+        // String cookie = "Cookies";
+        // Store cookieShop = new Store(cookie);
 
-        cookieShop.advertise();
+        // cookieShop.advertise();
     }
 }
