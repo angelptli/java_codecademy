@@ -354,8 +354,9 @@ public class Store {
     double price;
 
     // constructor method
-    public Store(String product) {
+    public Store(String product, double initialPrice) {
         productType = product;
+        price = initialPrice;
     }
 
     // advertise method
@@ -372,12 +373,13 @@ public class Store {
 
     // increase price method
     public void increasePrice(double priceToAdd) {
-        
+        double newPrice = price + priceToAdd;
+        price = newPrice;
     }
-    
+
     // main method
     public static void main(String[] args) {
-        Store lemonadeStand = new Store("Lemonade");
+        Store lemonadeStand = new Store("Lemonade", 3.75);
         // // Call the advertise() method on the lemonadeStand object
         // lemonadeStand.advertise();
         // lemonadeStand.advertise();
@@ -389,8 +391,12 @@ public class Store {
 
         // cookieShop.advertise();
 
-        // Call the greetCustomer() method on the lemonadeStand object
-        lemonadeStand.greetCustomer("Mr. Anderson");
+        // // Call the greetCustomer() method on the lemonadeStand object
+        // lemonadeStand.greetCustomer("Mr. Anderson");
+
+        // Increase the price at the lemonade stand by 1.5
+        lemonadeStand.increasePrice(1.5);
+        System.out.println(lemonadeStand.price);
     }
 }
 
