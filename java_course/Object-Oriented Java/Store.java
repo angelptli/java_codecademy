@@ -1,5 +1,5 @@
 /*
-================================================================================
+===============================================================================
 Introduction to Classes
 -----------------------
 All programs require one or more classes that act as a model for the world.
@@ -28,10 +28,10 @@ What should a savings account do?
 - Deposit money. (Method/behavior: deposit)
 - Withdraw money. (Method/behavior: withdraw)
 
-Imagine two people have accounts that are instances of the SavingsAccount class.
-They share behavior (how they deposit and withdraw) but have individual state
-(their balances), and even with the same balance amount these accounts are
-separate entities.
+Imagine two people have accounts that are instances of the SavingsAccount
+class. They share behavior (how they deposit and withdraw) but have individual
+state (their balances), and even with the same balance amount these accounts
+are separate entities.
 
 Instructions
 ------------
@@ -39,7 +39,7 @@ Our text editor contains a complete class definition that we'll build up as we
 progress through the lesson.
 
 Run the code to see it in action.
-================================================================================
+===============================================================================
 Classes: Syntax
 ---------------
 The fundamental concept of object-oriented programming is the class.
@@ -47,9 +47,9 @@ The fundamental concept of object-oriented programming is the class.
 A class is the set of instructions that describe how an instance can behave and
 what info it contains.
 
-Java has pre-defined classes such as System, which we've used in logging text to
-our screen, but we also need to write our own classes for the custom needs of a
-program.
+Java has pre-defined classes such as System, which we've used in logging text
+to our screen, but we also need to write our own classes for the custom needs
+of a program.
 ////////////////////////////////////////////////////////////
 Here's a definition of a Java class:
 
@@ -81,7 +81,7 @@ Instructions
 
 2. Your program will not compile without a main() method. Degine one within
    Store.
-================================================================================
+===============================================================================
 Classes: Constructors
 ---------------------
 In order to create an object (an instance of a class), we need a constructor
@@ -171,7 +171,7 @@ Instructions
    2. We create an instance so we move from main() to Store()
    3. The code inside Store() runs
    4. When Store() finishes execution, we return to main()
-================================================================================
+===============================================================================
 Classes: Instance Fields
 ------------------------
 Our last exercise ended with printing an instance of Store, which looked
@@ -187,11 +187,11 @@ the characteristics of an object.
 We'll add data to an object by introducing instance variables, or instance
 fields.
 
-We want Car instances of different colors, so we declare a String color instance
-field. Often times, instance variables are described as a "has-a" relationship
-with the object. For example, a Car "has-a" color. Another way to think of this
-is that instance variables are the nouns and adjectives associated with an
-object. What qualities other than color might a car have?
+We want Car instances of different colors, so we declare a String color
+instance field. Often times, instance variables are described as a "has-a"
+relationship with the object. For example, a Car "has-a" color. Another way to
+think of this is that instance variables are the nouns and adjectives
+associated with an object. What qualities other than color might a car have?
 /////////////////////////////////////////////////////////////////////////////
 public class Car {
     // declare fields inside the class by specifying the type and name
@@ -219,7 +219,7 @@ Instructions
 ------------
 1. Add some state to our Store class. Declare a String instance field for
    productType.
-================================================================================
+===============================================================================
 Classes: Constructor Parameters
 -------------------------------
 To create objects with dynamic, individual states, we'll use a combination of
@@ -313,7 +313,7 @@ Instructions
 
 2. Inside of the constructor method, set the instance variable productType
    equal to the product parameter.
-================================================================================
+===============================================================================
 Classes: Assigning Values to Instance Fields
 --------------------------------------------
 Now that our constructor has a parameter, we must pass values into the method
@@ -350,7 +350,8 @@ Inside the constructor, the parameter carColor refers to the value passed in
 during the invocation: "red". This value is assigned to the instance field
 color. (color = carColor  <- carColor = "red")
 
-color has already been declared, so we don't specify the type during assignment.
+color has already been declared, so we don't specify the type during
+assignment.
 
 The object, ferrari, holds the state of color as an instance field referencing
 the value "red".
@@ -364,8 +365,8 @@ ferrari.color; // "red"
 An "actual parameter", or argument, refers to the value being passed during a
 method call.
 
-Call by value is the process of calling a method with an argument value. When an
-argument is passed, the formal parameter is initialized with a copy of the
+Call by value is the process of calling a method with an argument value. When
+an argument is passed, the formal parameter is initialized with a copy of the
 argument value. For example, when we declared the ferrari object, the String
 value "red" is passed as an argument; then, the formal parameter carColor is
 assigned a copy of that value.
@@ -375,7 +376,118 @@ Instructions
 1. Inside main(), create an instance of Store and assign it to the variable
    lemonadeStand. Use "lemonade" as the parameter value.
 
+2. Print the instance field productType from lemonadeStand.
+===============================================================================
+Classes: Multiple Fields
+------------------------
+Objects are not limited to a single instance field. We can declare as many
+fiels as necessary for the requirements of our program.
 
+Let's change Car instances so they have multiple fields.
+
+We'll add a boolean isRunning, that indicates the car engine is on and an
+int velocity, that indicates the speed at which the car is traveling.
+//////////////////////////////////////////////////////////////////////////////
+public class Car {
+    String color;
+    // new fields!
+    boolean isRunning;
+    int velocity;
+
+    // new parameters that correspond to the new fields
+    public Car(String carColor, boolean carRunning, int milesPerHour) {
+        color = carColor;
+        // assign new parameters to the new fields
+        isRunning = carRunning;
+        velocity = milesPerHour;
+    }
+
+    public static void main(String[] args) {
+        // new values passed into the method call
+        Car ferrari = new Car("red", true, 27);
+        Car renault = new Car("blue", false, 70);
+
+        System.out.println(renault.isRunning);
+        // false
+        System.out.println(ferrari.velocity);
+        // 27
+    }
+}
+//////////////////////////////////////////////////////////////////////////////
+
+The constructor now has multiple parameters to receive values for the new
+fields. We still specify the type as well as the name for each parameter.
+
+Ordering matters! We must pass values into the constructor invocation in the
+same order that they're listed in the parameters.
+//////////////////////////////////////////////
+// values match types, no error
+Car honda = new Car("green", false, 0);
+
+// values do not match types, error!
+Car junker = new Car(true, 42, "brown");
+//////////////////////////////////////////////
+
+Instructions
+------------
+1. Add two new instance fields for Store. inventoryCount of type int.
+   inventoryPrice of type double.
+
+2. Update the Store constructor method with the new parameters. The parameters
+   should be product, count, and price, in that order. You must use that order
+   and include the types for each parameter. For example, product is of type
+   String because that value is assigned to the instance field String
+   productType.
+
+3. In the body of the Store constructor, assign the parameter values to the
+   appropriate instance fields.
+
+4. Inside main(), create an instance of Store called cookieShop. cookieShop has
+   "cookies" as the product. cookieShop has 12 cookies to sell and each cookie
+   costs 3.75.
+===============================================================================
+Classes: Review
+---------------
+Java is an object-oriented programming language where every program has at
+least one class. Programs are often built from many classes and objects, which
+are the instances of a class.
+
+Classes define the state and behavior of their instances. Behavior comes from
+methods defined in the class. State comes from instance fields declared inside
+the class.
+
+Classes are modeled on the real-world things we want to represent in our
+program. Later we will explore how a program can be made from multiple classes.
+For now, our programs are a single class.
+///////////////////////////////////////////////////////////////////////////////
+pubilc class Dog {
+    // instance field
+    String breed;
+
+    //constructor method
+    public Dog(String dogBreed) {
+        // value of parameter dogBreed assigned to instance field breed
+        breed = dogBreed;
+    }
+
+    public static void main(String[] args) {
+        // create instance: use 'new' operator and invoke constructor
+        Dog fido = new Dog("poodle");
+
+        // fields are accessed using: the instance name, `.` operator, and the
+        // field name.
+        fide.breed; // "poodle"
+    }
+}
+///////////////////////////////////////////////////////////////////////////////
+
+Instructions
+------------
+The text editor contains a Dog class. Play around with the code!
+
+Try to add and remove instance fields Create instances with different values.
+Access and print different fields.
+===============================================================================
 */
 public class Store {
     // instance fields
