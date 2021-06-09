@@ -49,48 +49,118 @@ Instructions
    would make checking the balance, depositing, and withdrawing all behavior
    that would take only one line of code.
 ===============================================================================
+Review
+------
+Great Work! Methods are a powerful way to abstract tasks away and make them
+repeatable. They allow us to define behavior for classes, so that the Objects
+we create can do the things we expect them to. Let's review everything we have
+learned about methods so far.
+- Defining a method: Methods have a method signature that declares their return
+  type, name, and parameters
+- Calling a method: Methods are invoked with a . and ()
+- Parameters: Inputs to the method and their types are declared in parentheses
+  in the method signature
+- Changing Instance Fields: Methods can be used to change the value of an
+  instance field
+- Scope: Variables only exist within the domain that they are created in
+- Return: The type of the variables that are output are declared in the method
+  signature
+
+As you move through more Java material, it will be helpful to frame the tasks
+you create in terms of methods. This will help you think about what inputs you
+might need and what output you expect.
+
+Instructions
+------------
+1. Now that we’ve learned about behavior, we can apply behavior to our
+   SavingsAccount class using methods! We've added the functionality for each
+   method inside main() now, but you will be rebuilding each above main(). Note
+   that your methods can directly access the balance field. First, write a
+   method called checkBalance() that prints:
+   ////////////////////
+   Hello!
+   Your balance is
+   ////////////////////
+   with the balance of the account displayed. It should take in no parameters
+   and return nothing.
+
+2. Now, write a method called deposit() that takes in an int parameter
+   amountToDeposit and adds it to the balance. It should return nothing. If you
+   want, you can also have the method print:
+   ///////////////////////////////////////
+   You just deposited amountToDeposit
+   ///////////////////////////////////////
+   with the value of amountToDeposit displayed.
+
+3. Now, write a method called withdraw() that takes in an int parameter
+   amountToWithdraw and subtracts it from the balance. It should return the
+   amountToWithdraw. If you want, you can also have the method print:
+   ////////////////////////////////////////
+   You just withdrew amountToWithdraw
+   ////////////////////////////////////////
+   with the value of amountToWithdraw displayed.
+
+4. Test out your methods by trying to replace some of the code in the main()
+   method with the equivalent methods! Make sure to use checkBalance(),
+   deposit(), and withdraw() at least once each.
+
+5. Congratulations! You’ve made a basic SavingsAccount. If you want, you can
+   add more functionality to this! What other instance fields might you want to
+   keep track of? What might a toString() look like for this class?
+===============================================================================
+
 */
 public class SavingsAccount {
-    
+  
     int balance;
-
+  
     public SavingsAccount(int initialBalance) {
         balance = initialBalance;
+    }
+  
+    public void checkBalance() {
+    System.out.println("Hello!\nYour balance is " + balance);
+    }
+
+    public void deposit(int amountToDeposit) {
+        balance += amountToDeposit;
+        System.out.println("You just deposited " + amountToDeposit);
+    }
+
+    public int withdraw(int amountToWithdraw) {
+        balance -= amountToWithdraw;
+        System.out.println("You just withdrew " + amountToWithdraw);
+        return amountToWithdraw;
     }
 
     public static void main(String[] args) {
         SavingsAccount savings = new SavingsAccount(2000);
+    
+        //Check balance:
+        savings.checkBalance();
+    
+        //Withdrawing:
+        savings.withdraw(300);
+    
+        //Check balance:
+        savings.checkBalance();
+    
+        //Deposit:
+        savings.deposit(600);
+    
+        //Check balance:
+        savings.checkBalance();
+    
+        //Deposit:
+        savings.deposit(600);
+    
+        //Check balance:
+        savings.checkBalance();
 
-        // Check balance:
-        System.out.println("Hello!");
-        System.out.println("Your balance is " + savings.balance);
+        System.out.println(savings);
+    }
 
-        // Withdrawing:
-        int afterWithdraw = savings.balance - 300;
-        savings.balance = afterWithdraw;
-        System.out.println("You just withdrew " + 300);
-
-        // Check balance:
-        System.out.println("Hello!");
-        System.out.println("Your balance is " + savings.balance);
-
-        // Deposit:
-        int afterDeposit = savings.balance + 600;
-        savings.balance = afterDeposit;
-        System.out.println("You just deposited " + 600);
-
-        // Check balance:
-        System.out.println("Hello!");
-        System.out.println("Your balance is " + savings.balance);
-
-        // Deposit:
-        int afterDeposit2 = savings.balance + 600;
-        savings.balance = afterDeposit2;
-        System.out.println("You just deposited " + 600);
-
-        // Check balance:
-        System.out.println("Hello!");
-        System.out.println("Your balance is " + savings.balance);
-
+    public String toString() {
+        return "\nFinal balance: $" + balance;
     }
 }
