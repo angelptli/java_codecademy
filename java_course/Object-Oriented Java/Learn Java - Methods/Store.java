@@ -476,6 +476,12 @@ public class Store {
         price = newPrice;
     }
 
+    // get price with tax method
+    public double getPriceWithTax() {
+        double totalPrice = price + price * 0.08;
+        return totalPrice;
+    }
+
     // main method
     public static void main(String[] args) {
         Store lemonadeStand = new Store("Lemonade", 3.75);
@@ -496,6 +502,10 @@ public class Store {
         // // Increase the price at the lemonade stand by 1.5
         // lemonadeStand.increasePrice(1.5);
         // System.out.println(lemonadeStand.price);
+
+        // call getPriceWithTax() method on lemonadeStand object
+        double lemonadePrice = lemonadeStand.getPriceWithTax();
+        System.out.println(lemonadePrice);
     }
 }
 
