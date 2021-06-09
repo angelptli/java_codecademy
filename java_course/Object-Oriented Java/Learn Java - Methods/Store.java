@@ -571,6 +571,14 @@ public class Store {
         // // call getPriceWithTax() method on lemonadeStand object
         // double lemonadePrice = lemonadeStand.getPriceWithTax();
         // System.out.println(lemonadePrice);
+
+        // print the objects lemonadeStand and cookieShop
+        System.out.println(lemonadeStand);
+        System.out.println(cookieShop);
+    }
+
+    public String toString() {
+        return "This store sells " + productType + " at a price of " + price
+                + ".";
     }
 }
-
