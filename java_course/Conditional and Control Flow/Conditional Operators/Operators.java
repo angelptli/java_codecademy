@@ -53,32 +53,32 @@ expression is true or false. When you're ready, uncomment the print statements
 to find out if you are right.
 ================================================================================
 */
-public class Operators {
-    public static void main(String[] args) {
-        int a = 6;
-        int b = 3;
+// public class Operators {
+//     public static void main(String[] args) {
+//         int a = 6;
+//         int b = 3;
 
-        boolean ex1 = !(a == 7 && (b >= a || a != a));
-        // !(false && (3 >= 6 || 6 != 6))
-        // !(false && (false || false))
-        // !(false && false)
-        // !false
-        // true
-        System.out.println(ex1);
+//         boolean ex1 = !(a == 7 && (b >= a || a != a));
+//         // !(false && (3 >= 6 || 6 != 6))
+//         // !(false && (false || false))
+//         // !(false && false)
+//         // !false
+//         // true
+//         System.out.println(ex1);
 
-        boolean ex2 = a == b || !(b > 3);
-        // 6 == 3 || !(3 > 3)
-        // false || !false
-        // false || true
-        // true
-        System.out.println(ex2);
+//         boolean ex2 = a == b || !(b > 3);
+//         // 6 == 3 || !(3 > 3)
+//         // false || !false
+//         // false || true
+//         // true
+//         System.out.println(ex2);
 
-        boolean ex3 = !(b <= a && b != a + b);
-        // !(3 <= 6 && 3 != 6 + 3)
-        // !(true && true)]
-        // !true
-        // false
-        System.out.println(ex3); 
+//         boolean ex3 = !(b <= a && b != a + b);
+//         // !(3 <= 6 && 3 != 6 + 3)
+//         // !(true && true)]
+//         // !true
+//         // false
+//         System.out.println(ex3); 
 
-    }
-}
+//     }
+// }
