@@ -157,11 +157,11 @@ public class Newsfeed2 {
     }
 
     public String getTopTopic() {
-
+        return topics[0];
     }
 
     public void viewTopic(int topicIndex) {
-
+        views[topicIndex]++;
     }
   
     public static void main(String[] args) {
