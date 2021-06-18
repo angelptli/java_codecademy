@@ -139,7 +139,7 @@ Instructions
 ================================================================================
 */
 //  import the Arrays package here:
-import java.util.Arrays;
+// import java.util.Arrays;
 
 public class Newsfeed2 {
 
@@ -170,7 +170,7 @@ public class Newsfeed2 {
         // String[] topics = sampleFeed.getTopics();
         // System.out.println(Arrays.toString(topics));
 
-        System.out.println("The top topic is "+ sampleFeed.getTopTopic());
+        System.out.println("The top topic is " + sampleFeed.getTopTopic());
     
         sampleFeed.viewTopic(1);
         sampleFeed.viewTopic(1);
