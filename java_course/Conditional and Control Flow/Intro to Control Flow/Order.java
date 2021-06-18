@@ -46,12 +46,49 @@ Instructions
 if-then statement that prints "High value item!" when itemCost is greater than
 24.00.
 ================================================================================
+IF-Then-Else
+------------
+We've seen how to conditionally execute one block of code, but what if there
+are two possible blocks of code we'd like to execute?
+
+Let's say if a student has the required prerequisite, then they enroll in the
+selected course, else they're enrolled in the prerequisite course instead.
+
+We create an alternate conditional branch with the else keyword:
+//////////////////////////////////
+if (hasPrerequisite) {
+    // Enroll in course
+} else {
+    // Enroll in prerequisite
+}
+//////////////////////////////////
+
+This conditional statement ensures that exactly one code block will be run. If
+the condition, hasPrerequisite, is false, the block after else runs.
+
+There are now two separate code blocks in our conditional statement. The first
+block runs if the condition evaluates to true, the second block runs if the
+conditional evaluates to false.
+
+This cose is also called and if-then-else statement:
+- If condition is true, then do something.
+- Else, do a different thing.
+
+Instructions
+------------
+1. In the code editor, there is an isFilled value, that represents whether the
+   order is ready to ship. Write an if-then-else statement that:
+   - When isFilled is true, print "Shipping".
+   - When isFilled is false, print "Order not ready".
+================================================================================
 */
 public class Order {
     public static void main(String[] args) {
-        double itemCost = 30.99;
+        // double itemCost = 30.99;
 
-        // Write an if-then statement:
-        if (itemCost > 24) System.out.println("High value item!");
+        // // Write an if-then statement:
+        // if (itemCost > 24) System.out.println("High value item!");
+
+        // Write an if-then-else statement:
     }
 }
