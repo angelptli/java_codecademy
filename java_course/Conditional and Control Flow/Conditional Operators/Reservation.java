@@ -170,6 +170,43 @@ Instructions
    Unable to confirm reservation, please contact restaurant. Else write: Please
    enjoy your meal!
 ================================================================================
+Review
+------
+Conditional operators work on boolean values to simplify our code. They're often
+combined with conditional statements to consolidate the branching logic.
+
+Conditional-AND, &&, evaluates to true if the booleans on both sides are true.
+///////////////////////////////////////////////////////
+if (true && false) {
+    System.out.println("You won't see me print!");
+} else if (true && true) {
+    System.out.println("You will see me print!");
+}
+///////////////////////////////////////////////////////
+
+Conditional-OR, ||, evaluates to true if one or both the booleans on either
+side is true.
+///////////////////////////////////////////////////////
+if (false || false) {
+    System.out.println("You won't see me print!");
+} else if (false || true) {
+    System.out.println("You will see me print!");
+}
+///////////////////////////////////////////////////////
+
+Logical-NOT, !, evaluates to the opposite boolean value to which it is applied.
+///////////////////////////////////////////////////////
+if (!false) {
+    System.out.println("You will see me print!");
+}
+///////////////////////////////////////////////////////
+
+Instructions
+------------
+The complete Reservation class is in the code editor. Play around inside main()
+and see if you can create instances that will run every possible conditional
+branch.
+================================================================================
 */
 public class Reservation {
     int guestCount;
@@ -184,8 +221,8 @@ public class Reservation {
         }
 
         guestCount = count;
-		    restaurantCapacity = capacity;
-		    isRestaurantOpen = open;
+		restaurantCapacity = capacity;
+		isRestaurantOpen = open;
     }
 
     public void confirmReservation() {
@@ -216,18 +253,29 @@ public class Reservation {
         
         // Write conditional here
         if (!isConfirmed) {
-            System.out.println("Unable to confirm reservation, please contact restaurant.");
+            System.out.println("Unable to confirm reservation, please contact "
+                               + "restaurant.");
         } else {
             System.out.println("Please enjoy your meal!");
         }
     }
   
     public static void main(String[] args) {
+        // Reservation partyOfThree = new Reservation(3, 12, true);
+        // Reservation partyOfFour = new Reservation(4, 3, true);
+        // partyOfThree.confirmReservation();
+        // partyOfThree.informUser();
+        // partyOfFour.confirmReservation();
+        // partyOfFour.informUser();
+        
         Reservation partyOfThree = new Reservation(3, 12, true);
-        Reservation partyOfFour = new Reservation(4, 3, true);
+        Reservation partyOfFour = new Reservation(4, 3, false);
+        Reservation partyOfTen = new Reservation(10, 7, false);
         partyOfThree.confirmReservation();
         partyOfThree.informUser();
         partyOfFour.confirmReservation();
         partyOfFour.informUser();
+        partyOfTen.confirmReservation();
+        partyOfTen.informUser();
     }
 }
