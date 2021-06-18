@@ -98,7 +98,7 @@ Instructions
 ================================================================================
 */
 //  import the Arrays package here:
-
+import java.util.Arrays;
 
 public class Newsfeed2 {
   
@@ -115,7 +115,7 @@ public class Newsfeed2 {
     public static void main(String[] args) {
         Newsfeed2 sampleFeed = new Newsfeed2();
         String[] topics = sampleFeed.getTopics();
-        System.out.println(topics);
+        System.out.println(Arrays.toString(topics));
         
     }
   }  
