@@ -52,5 +52,6 @@ public class Order {
         double itemCost = 30.99;
 
         // Write an if-then statement:
+        if (itemCost > 24) System.out.println("High value item!");
     }
 }
