@@ -59,12 +59,26 @@ public class Operators {
         int b = 3;
 
         boolean ex1 = !(a == 7 && (b >= a || a != a));
-        // System.out.println(ex1);
+        // !(false && (3 >= 6 || 6 != 6))
+        // !(false && (false || false))
+        // !(false && false)
+        // !false
+        // true
+        System.out.println(ex1);
 
         boolean ex2 = a == b || !(b > 3);
-        // System.out.println(ex2);
+        // 6 == 3 || !(3 > 3)
+        // false || !false
+        // false || true
+        // true
+        System.out.println(ex2);
 
         boolean ex3 = !(b <= a && b != a + b);
-        // System.out.println(ex3); 
+        // !(3 <= 6 && 3 != 6 + 3)
+        // !(true && true)]
+        // !true
+        // false
+        System.out.println(ex3); 
+
     }
 }
