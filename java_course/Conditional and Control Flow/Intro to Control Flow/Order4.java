@@ -30,7 +30,7 @@ switch (course) {
 ////////////////////////////////////////////////////
 
 This example enrolls the student in History class by checking the value
-contained in the parenthese, course, against each of the case labels. If the
+contained in the parentheses, course, against each of the case labels. If the
 value after the case label matches the value within the parentheses, the switch
 block is run.
 
@@ -127,3 +127,4 @@ public class Order4 {
         book.ship();
         chemistrySet.ship();
     }
+}
