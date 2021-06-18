@@ -72,6 +72,7 @@ Instructions
    I called setFavoriteArticle(2, "Celebrity Hands Throughout the Decades"),
    the value of favoriteArticles at index 2 would be set to "Celebrity Hands
    Throughout the Decades".
+================================================================================
 */
 // import java.util.Arrays;
 

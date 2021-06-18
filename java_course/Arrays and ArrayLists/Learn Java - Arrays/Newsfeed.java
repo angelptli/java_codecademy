@@ -1,4 +1,5 @@
 /*
+================================================================================
 Introduction
 ------------
 We have seen how to store single pieces of data in variables. What happens
@@ -43,6 +44,7 @@ Instructions
    articles and their associated views and ratings. We did this using Java
    arrays, which you’ll learn about throughout the lesson! For now, run the
    code to see some of our method calls.
+================================================================================
 */
 public class Newsfeed {
   
