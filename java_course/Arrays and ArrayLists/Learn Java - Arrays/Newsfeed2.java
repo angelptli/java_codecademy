@@ -96,26 +96,91 @@ Instructions
 2. Now that you have the Arrays package, use its toString() method to print out
    the topics array in the main() method.
 ================================================================================
+Get Element By Index
+--------------------
+Now that we have an array declared and initialized, we want to be able to get
+values out of it.
+
+We use square brackets, [ and ], to access data at a certain index:
+//////////////////////////////////////////////////
+double[] prices = {13.1, 15.87, 14.22, 16.66};
+System.out.println(prices[1]);
+//////////////////////////////////////////////////
+
+This command would print:
+/////////
+15.87
+/////////
+
+If we try to access an element outside of its appropriate index range, we will
+receive an ArrayIndexOutOfBoundsException error.
+
+For example, if we were to run the command
+System.out.println(prices[5), we'd get the following output:
+////////////////////////////////////////////////
+java.lang.ArrayIndexOutOfBoundsException: 5
+////////////////////////////////////////////////
+
+Instructions
+------------
+1. We have augmented the Newsfeed class to start with the topics array as an
+   instance field. Fill in the getTopTopic() method to return the 0th index of
+   the topics array.
+
+2. But wait — we added more to the Newsfeed class. Now, each instance starts
+   with an array of zeros called views as an instance field. Every time someone
+   views a topic, we want to increment the value of the appropriate field in
+   views. For example, if someone views an "Opinion" piece, we want to increase
+   the value of the 0th index of views from 0 to 1. If they view it again, we
+   want to increase the value to 2. We have written a method signature for
+   viewTopic(), which takes in an int called topicIndex. Inside the method, set
+   the value of the views array at the index topicIndex to the current value
+   plus 1.
+================================================================================
 */
 //  import the Arrays package here:
 import java.util.Arrays;
 
 public class Newsfeed2 {
-  
+
+        String[] topics = {"Opinion", "Tech", "Science", "Health"};
+        int[] views = {0, 0, 0, 0};
+
     public Newsfeed2() {
-      
+
     }
     
     // Create getTopics() below:
     public String[] getTopics() {
-        String[] topics = {"Opinion", "Tech", "Science", "Health"};
+        // String[] topics = {"Opinion", "Tech", "Science", "Health"};
         return topics;
+    }
+
+    public String getTopTopic() {
+
+    }
+
+    public void viewTopic(int topicIndex) {
+
     }
   
     public static void main(String[] args) {
         Newsfeed2 sampleFeed = new Newsfeed2();
-        String[] topics = sampleFeed.getTopics();
-        System.out.println(Arrays.toString(topics));
-        
+
+        // String[] topics = sampleFeed.getTopics();
+        // System.out.println(Arrays.toString(topics));
+
+        System.out.println("The top topic is "+ sampleFeed.getTopTopic());
+    
+        sampleFeed.viewTopic(1);
+        sampleFeed.viewTopic(1);
+        sampleFeed.viewTopic(3);
+        sampleFeed.viewTopic(2);
+        sampleFeed.viewTopic(2);
+        sampleFeed.viewTopic(1);
+    
+        System.out.println("The " + sampleFeed.topics[1]
+                           + " topic has been viewed "
+                           + sampleFeed.views[1] + " times!"); 
     }
   }  
