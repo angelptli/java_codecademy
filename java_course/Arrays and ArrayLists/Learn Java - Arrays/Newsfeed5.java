@@ -56,6 +56,15 @@ Instructions
 
 2. In the terminal, run the Newsfeed.java file with the argument "Robot".
    Now, run the Newsfeed.java file with the argument "Human".
+   //////////////////////////////////////
+   $ java Newsfeed Robot
+   The topics in this feed are:
+   [Oil, Parts, Algorithms, Love]
+   $ java Newsfeed Human
+   The topics in this feed are:
+   [Politics, SCience, Sports, Love]
+   //////////////////////////////////////
+   
 ================================================================================
 */
 import java.util.Arrays;
@@ -76,7 +85,7 @@ public class Newsfeed5 {
             String[] humanTopics = {"Politics", "Science", "Sports", "Love"};
     	    		feed = new Newsfeed5(humanTopics);
               
-            } else if(_____________) {
+            } else if(args[0].equals("Robot")) {
               
                 //topics for a Robot feed:
                 String[] robotTopics = {"Oil", "Parts", "Algorithms", "Love"};
