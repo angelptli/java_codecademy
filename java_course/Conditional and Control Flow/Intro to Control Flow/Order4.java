@@ -84,7 +84,7 @@ public class Order4 {
     String shipping;
   
     public Order4(boolean filled, double cost, String shippingMethod) {
-		    if (cost > 24.00) {
+		if (cost > 24.00) {
             System.out.println("High value item!");
         }
         isFilled = filled;
@@ -104,7 +104,17 @@ public class Order4 {
     public double calculateShipping() {
         double shippingCost;
 	 	    // declare switch statement here
-    
+        switch (shipping) {
+
+        case "Regular":
+            shippingCost = 0;
+            break;
+        case "Express":    
+            shippingCost = 1.75;
+            break;
+        default:
+            shippingCost = .50; 
+        }
     
         return shippingCost;
  	  }
@@ -117,4 +127,3 @@ public class Order4 {
         book.ship();
         chemistrySet.ship();
     }
-}
