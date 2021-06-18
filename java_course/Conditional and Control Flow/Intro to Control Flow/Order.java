@@ -90,8 +90,9 @@ public class Order {
         // if (itemCost > 24) System.out.println("High value item!");
 
         boolean isFilled = false;
-        
-        // Write an if-then-else statement:
 
+        // Write an if-then-else statement:
+        if (isFilled == true) System.out.println("Shipping");
+        else System.out.println("Order not ready");
     }
 }
