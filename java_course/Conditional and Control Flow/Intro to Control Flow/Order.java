@@ -89,6 +89,9 @@ public class Order {
         // // Write an if-then statement:
         // if (itemCost > 24) System.out.println("High value item!");
 
+        boolean isFilled = false;
+        
         // Write an if-then-else statement:
+
     }
 }
