@@ -179,6 +179,38 @@ Instructions
 2. Use get() to access the second to-do element of poirotsToDos and print the
    result.
 ================================================================================
+Changing a Value
+----------------
+When we were using arrays, we could rewrite entries by using bracket notation
+to reassign values:
+//////////////////////////////////////////////////////////////////////////////
+String[] shoppingCart = {"Trench Coat", "Tweed Hat", "Magnifying Glass"};
+ 
+shoppingCart[0] = "Tweed Cape";
+ 
+// shoppingCart now holds ["Tweed Cape", "Tweed Hat", "Magnifying Glass"]
+//////////////////////////////////////////////////////////////////////////////
+
+ArrayList has a slightly differennt way of doing this, using the set() method:
+//////////////////////////////////////////////////////////////////////////////
+ArrayList<String> shoppingCart = new ArrayList<shoppingCart>();
+
+shoppingCart.add("Trench Coat");
+shoppingCart.add("Tweed Hat");
+shoppingCart.add("Magnifying Glass");
+shoppingCart.add(0, "Tweed Cape");
+
+// shoppingCart now holds ["Tweed Cape", "Tweed Hat", "Magnifying Glass"]
+//////////////////////////////////////////////////////////////////////////////
+
+Instructions
+------------
+1. Modify sherlocksToDos so that the value at "play violin" becomes "listen to
+   Dr. Watson for amusement".
+
+2. Modify poirotsToDos so that the value at "trim mustache" becomes "listen to
+   Captain Hastings for amusement".
+================================================================================
 */
 // import the ArrayList package here:
 import java.util.ArrayList;
@@ -237,6 +269,16 @@ class ToDos {
         // System.out.println("Poirot's second to-do:");
         // // Print Poirot's second to-do:
         // System.out.println(poirotsToDos.get(1));
+
+        // Exercise: Changing a Value
+        // --------------------------
+        // Set each to-do below:
+        
+        
+        System.out.println("Sherlock's to-do list:");
+        System.out.println(sherlocksToDos.toString() + "\n");
+        System.out.println("Poirot's to-do list:");
+        System.out.println(poirotsToDos.toString());
     }
     
 }
