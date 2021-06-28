@@ -211,6 +211,46 @@ Instructions
 2. Modify poirotsToDos so that the value at "trim mustache" becomes "listen to
    Captain Hastings for amusement".
 ================================================================================
+Removing an Item
+----------------
+What if we wanted to get rid of an entry altogether? For arrays, we would have
+to make a completely new array without the value.
+
+Luckily, ArrayLists allow us to remove an item by specifying the index to
+remove:
+///////////////////////////////////////////////////////////////////
+ArrayList<String> shoppingCart = new ArrayList<String>();
+ 
+shoppingCart.add("Trench Coat");
+shoppingCart.add("Tweed Houndstooth Hat");
+shoppingCart.add("Magnifying Glass");
+ 
+shoppingCart.remove(1);
+// shoppingCart now holds ["Trench Coat", "Magnifying Glass"]
+///////////////////////////////////////////////////////////////////
+
+We can also remove an item by specifying the value to remove:
+/////////////////////////////////////////////////////////////////////////////
+ArrayList<String> shoppingCart = new ArrayList<String>();
+ 
+shoppingCart.add("Trench Coat");
+shoppingCart.add("Tweed Houndstooth Hat");
+shoppingCart.add("Magnifying Glass");
+ 
+shoppingCart.remove("Trench Coat");
+// shoppingCart now holds ["Tweed Houndstooth Hat", "Magnifying Glass"]
+/////////////////////////////////////////////////////////////////////////////
+
+Note: This command removes the FIRST instance of the value "Trench Coat".
+
+Instructions
+------------
+1. Sherlock Holmes and Hercules Poirot have each already visited their
+   respective crime scenes. Remove "visit the crime scene" from sherlocksToDos
+   and poirotsToDos using remove(). Moreover, Sherlock Holmes has also gotten
+   some violin playing done. So you can remove "play violin" from
+   sherlocksToDos as well.
+================================================================================
 */
 // import the ArrayList package here:
 import java.util.ArrayList;
@@ -272,13 +312,23 @@ class ToDos {
 
         // Exercise: Changing a Value
         // --------------------------
-        // Set each to-do below:
-        sherlocksToDos.set(1, "listen to Dr. Watson for amusement");
-        poirotsToDos.set(3, "listen to Captain Hastings for amusement");
+        // // Set each to-do below:
+        // sherlocksToDos.set(1, "listen to Dr. Watson for amusement");
+        // poirotsToDos.set(3, "listen to Captain Hastings for amusement");
         
-        System.out.println("Sherlock's to-do list:");
+        // System.out.println("Sherlock's to-do list:");
+        // System.out.println(sherlocksToDos.toString() + "\n");
+        // System.out.println("Poirot's to-do list:");
+        // System.out.println(poirotsToDos.toString());
+
+
+        // Exercise: Removing an Item
+        // --------------------------
+        // Remove each to-do below:
+        
+    
+      
         System.out.println(sherlocksToDos.toString() + "\n");
-        System.out.println("Poirot's to-do list:");
         System.out.println(poirotsToDos.toString());
     }
     
