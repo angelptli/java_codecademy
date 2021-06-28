@@ -251,6 +251,29 @@ Instructions
    some violin playing done. So you can remove "play violin" from
    sherlocksToDos as well.
 ================================================================================
+Getting an Item's Index
+-----------------------
+What if we had a really large list and wanted to know the position of a certain
+element in it? For isntance, what if we havd an ArrayList detectives with the
+names of fictional detectives in chronological order, and we wanted to know
+what position "Fletcher" was.
+/////////////////////////////////////////////////////////////////////////////
+// detectives holds ["Holmes", "Poirot", "Marple", "Spade", "Fletcher",
+// "Conan", "Ramotswe"];
+System.out.println(detectives.indexOf("Fletcher"));
+/////////////////////////////////////////////////////////////////////////////
+
+This code would print 4, since "Fletcher" is at index 4 of the detectives
+ArrayList.
+
+Instructions
+------------
+1. After visiting the crime scene, the ever-impatient Dr.Watson wants to know
+   how many to-dos are left until Sherlock solves the case. To help Dr. Watson
+   figure this out, use indexOf() to determine where in the to-do list "solve
+   the case" is. Print this information out. That's the number of to-dos
+   remaining before Sherlock reaches "solve the case".
+================================================================================
 */
 // import the ArrayList package here:
 import java.util.ArrayList;
@@ -324,13 +347,24 @@ class ToDos {
 
         // Exercise: Removing an Item
         // --------------------------
-        // Remove each to-do below:
-        sherlocksToDos.remove(0);
-        sherlocksToDos.remove(0);
-        poirotsToDos .remove(0);
+        // // Remove each to-do below:
+        // sherlocksToDos.remove(0);
+        // sherlocksToDos.remove(0);
+        // poirotsToDos .remove(0);
 
-        System.out.println(sherlocksToDos.toString() + "\n");
-        System.out.println(poirotsToDos.toString());
+        // System.out.println(sherlocksToDos.toString() + "\n");
+        // System.out.println(poirotsToDos.toString());
+
+        // Exercise: Getting an Item's Index
+        // ---------------------------------
+        sherlocksToDos.remove("visit the crime scene");
+
+        // Calculate to-dos until case is solved:
+
+
+        // Change the value printed:
+        System.out.println("PRINT THE ANSWER HERE");
+
     }
     
 }
