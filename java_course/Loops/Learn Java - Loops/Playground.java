@@ -53,14 +53,14 @@ class Playground {
 
 	  public static void main(String[] args) {
         // Create an empty ArrayList
-        ArrayList<Integer> evenNumbersList = new ArrayList<Integer>();
+        ArrayList<Integer> evenNumsList = new ArrayList<Integer>();
         
         // Add the numbers 1 through 10 to the ArrayList
         for (int i = 1; i < 11; i++) {
-            evenNumbersList.add(i);
+            evenNumsList.add(i);
         }
 
-        System.out.println("Even Numbers: " + removeOdds(evenNumbersList));
+        System.out.println("Even Numbers: " + evenNumsList);
         // for (int i = 0; i < 28; i++) {
   		//     System.out.println("Congrats on finishing Java loops!");
 	    // }
