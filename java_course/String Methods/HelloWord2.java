@@ -25,9 +25,8 @@ Let's get started!
    program. We'll learn about them later, but can you guess what some of them
    do?
 ================================================================================
-Introduction to String Methods
 */
-class HelloWorld {
+class HelloWorld2 {
   
 	public static void main(String[] args) {
     
