@@ -360,7 +360,7 @@ class ToDos {
         sherlocksToDos.remove("visit the crime scene");
 
         // Calculate to-dos until case is solved for Sherlock:
-        sherlocksToDos.indexOf("solve the case")
+        sherlocksToDos.indexOf("solve the case");
 
         // Change the value printed:
         System.out.println(sherlocksToDos.indexOf("solve the case"));
