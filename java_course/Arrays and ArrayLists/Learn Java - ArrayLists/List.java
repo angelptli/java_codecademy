@@ -41,7 +41,7 @@ class List {
         grublist.add(grub2);
         grublist.add(grub3);
 
-        // Find the breakfast item in the Arraylist by index:
+        // Find the breakfast item in the ArrayList by index:
         System.out.println(grublist.get(1));
 
         // Change the value of the non-solid grub item
