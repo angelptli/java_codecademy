@@ -37,7 +37,8 @@ public class Initials {
         String lastName = "";
         
         // What are the initials?
-    
+        System.out.println(firstName.charAt(0));
+        System.out.println(lastName.charAt(0));
     
     }
   
