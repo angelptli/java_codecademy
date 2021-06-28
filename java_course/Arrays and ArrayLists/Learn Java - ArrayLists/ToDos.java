@@ -106,10 +106,45 @@ that specifies its type is preferred.
 Instructions
 ------------
 1. We've created an empty ArrayList called toDoList. Time to add some to-dos!
-   Below where we’ve initialized toDo1, initialize two new String variables:
+   Below where we've initialized toDo1, initialize two new String variables:
    toDo2 and toDo3. Set their values to any tasks you like.
 
 2. Use .add() to add toDo1, toDo2, and toDo3 to toDoList.
+================================================================================
+ArrayList Size
+--------------
+Let's say we have an ArrayList that stores items in a user's online shopping
+cart. As the user navigates through the site and adds items, their cart grows
+bigger and bigger.
+
+If we wanted to display the number of items in the carts, we could find the
+size of it using the size() method:
+////////////////////////////////////////////////
+ArrayList<String> shoppingCart = new ArrayLiist<String>();
+
+shoppingCart.add("Trench Coat");
+System.out.println(shoppingCart.size());
+//1 is printed
+shoppingCart.add("Tweed Houndstooth Hat");
+System.out.println(shoppingCart.size());
+// 2 is printed
+shoppingCart.add("Magnifying Glass");
+System.out.println(shoppingCart.size());
+// 3 is printed
+////////////////////////////////////////////////
+
+In dynamic objects like ArrayLists, it's important to know how to access the
+amount of objects we have stored.
+
+Instructions
+------------
+1. Detectives do a lot to solve a case. But who has more to do? Print out the
+   size of each detective's to-do ArrayList:
+   - sherlocksToDos for Sherlock Holmes
+   - poirotsToDos for Hercules Poirot
+
+2. So who has more to do? Print the name of the detective whose to-do list is
+   longer.. Was it Sherlock or Poirot?
 ================================================================================
 */
 // import the ArrayList package here:
@@ -119,20 +154,51 @@ class ToDos {
   
     public static void main(String[] args) {
       
-        // Create toDoList below:
-        ArrayList<String> toDoList = new ArrayList<String>();
-        String toDo1 = "Water plants";
-        // Add more to-dos here:
-        String toDo2 = "Eat dirt";
-        String toDo3 = "Play with gophers";
+        // // Create toDoList below:
+        // ArrayList<String> toDoList = new ArrayList<String>();
+        // String toDo1 = "Water plants";
+        // // Add more to-dos here:
+        // String toDo2 = "Eat dirt";
+        // String toDo3 = "Play with gophers";
 
-        // Add to-dos to toDoList
-        toDoList.add(toDo1);
-        toDoList.add(toDo2);
-        toDoList.add(toDo3);
+        // // Add to-dos to toDoList
+        // toDoList.add(toDo1);
+        // toDoList.add(toDo2);
+        // toDoList.add(toDo3);
 
-        System.out.println(toDoList);
-      
+        // System.out.println(toDoList);
+    
+        // Exercise: ArrayList Size
+        // Sherlock
+        ArrayList<String> sherlocksToDos = new ArrayList<String>();
+
+        sherlocksToDos.add("visit the crime scene");
+        sherlocksToDos.add("play violin");
+        sherlocksToDos.add("interview suspects");
+        sherlocksToDos.add("solve the case");
+        sherlocksToDos.add("apprehend the criminal");
+
+        // Poirot
+        ArrayList<String> poirotsToDos = new ArrayList<String>();
+
+        poirotsToDos.add("visit the crime scene");
+        poirotsToDos.add("interview suspects");
+        poirotsToDos.add("let the little grey cells do their work");
+        poirotsToDos.add("trim mustache");
+        poirotsToDos.add("call all suspects together");
+        poirotsToDos.add("reveal the truth of the crime");
+
+        // Print the size of each ArrayList below:
+
+        // Print the nae of the detective with the larger to-do list:
+
+
+
+
+
+
+
+
     }
     
 }
