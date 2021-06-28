@@ -229,12 +229,14 @@ class ToDos {
         // // Print the name of the detective with the larger to-do list:
         // System.out.println("poirots");
 
-        System.out.println("Sherlock's third to-do:");
-        // Print Sherlock's third to-do:
+        // // Exercise: Accessing an Index
+        // System.out.println("Sherlock's third to-do:");
+        // // Print Sherlock's third to-do:
+        // System.out.println(sherlocksToDos.get(2));
 
-        System.out.println("Poirot's second to-do:");
-        // Print Poirot's second to-do:
-        
+        // System.out.println("Poirot's second to-do:");
+        // // Print Poirot's second to-do:
+        // System.out.println(poirotsToDos.get(1));
     }
     
 }
