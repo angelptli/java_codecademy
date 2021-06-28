@@ -273,7 +273,8 @@ class ToDos {
         // Exercise: Changing a Value
         // --------------------------
         // Set each to-do below:
-        
+        sherlocksToDos.set(1, "listen to Dr. Watson for amusement");
+        poirotsToDos.set(3, "listen to Captain Hastings for amusement");
         
         System.out.println("Sherlock's to-do list:");
         System.out.println(sherlocksToDos.toString() + "\n");
