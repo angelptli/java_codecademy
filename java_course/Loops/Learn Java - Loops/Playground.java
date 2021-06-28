@@ -36,15 +36,33 @@ Feel free to play around with loops, arrays, and ArrayLists in the code editor.
 ================================================================================
 */
 import java.util.ArrayList;
-import java.util.Arrays;
+// import java.util.Arrays;
 
 class Playground {
 
-	public static void main(String[] args) {
-  
-    for (int i = 0; i < 28; i++) {
-  		System.out.println("Congrats on finishing Java loops!");
-	  }
-  }
+    public static ArrayList<Integer> removeOdds(ArrayList<Integer> evenNums) {
+        for (int i = 0; i < evenNums.size(); i++) {
+            // System.out.println(evenNums.get(i));
+            if (evenNums.get(i) % 2 != 0) {
+                evenNums.remove(evenNums.get(i));
+                i--;
+            }
+        }
+        return evenNums;
+    }
 
+	  public static void main(String[] args) {
+        // Create an empty ArrayList
+        ArrayList<Integer> evenNumbersList = new ArrayList<Integer>();
+        
+        // Add the numbers 1 through 10 to the ArrayList
+        for (int i = 1; i < 11; i++) {
+            evenNumbersList.add(i);
+        }
+
+        System.out.println("Even Numbers: " + removeOdds(evenNumbersList));
+        // for (int i = 0; i < 28; i++) {
+  		//     System.out.println("Congrats on finishing Java loops!");
+	    // }
+    }
 }
