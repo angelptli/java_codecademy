@@ -45,7 +45,7 @@ public class MorseCode {
                       + "- / .-. .- -- . -.";
         
         // Write the code:
-      
+        System.out.println(code.indexOf(". .- -"));
       
     }
     
