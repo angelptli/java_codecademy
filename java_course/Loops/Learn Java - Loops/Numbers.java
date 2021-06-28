@@ -86,7 +86,7 @@ class Numbers {
                 continue;
             }
             System.out.println(i);
-          }
+        }
     }
 }
       
