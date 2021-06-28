@@ -1,1 +1,1 @@
-# java_codecademy
+# Learn Java with Codecademy! 🙌
