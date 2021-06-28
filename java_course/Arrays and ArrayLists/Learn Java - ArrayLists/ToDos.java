@@ -325,9 +325,10 @@ class ToDos {
         // Exercise: Removing an Item
         // --------------------------
         // Remove each to-do below:
-        
-    
-      
+        sherlocksToDos.remove(0);
+        sherlocksToDos.remove(0);
+        poirotsToDos .remove(0);
+
         System.out.println(sherlocksToDos.toString() + "\n");
         System.out.println(poirotsToDos.toString());
     }
