@@ -72,7 +72,7 @@ public class Password {
         String password = "correcthorsebatterystaple";
         
         // Write the code:
-      
+        System.out.println(password.equals("123"));
       
     }
     
