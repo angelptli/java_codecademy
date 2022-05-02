@@ -1,1 +1,1 @@
-# Learn Java with Codecademy! 🙌
+# Learn Java with Codecademy :coffee:
